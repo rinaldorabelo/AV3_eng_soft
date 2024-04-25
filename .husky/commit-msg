@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+# Captura a mensagem de commit
+COMMIT_MSG_FILE=$1
+COMMIT_MSG=$(cat $COMMIT_MSG_FILE)
+
+# Define o padrão do Conventional Commits
+CONVENTIONAL_COMMIT_REGEX="^(build|chore|ci|docs|feat|fix|perf|refactor|revert|style|test)(\(.+\))?: .+$"
+
+# Verifica se a mensagem de commit segue o padrão do Conventional Commits
+if ! echo "$COMMIT_MSG" | grep -qE "$CONVENTIONAL_COMMIT_REGEX"; then
+  echo "ERRO: A mensagem de commit não segue o padrão do Conventional Commits."
+  exit 1
+fi

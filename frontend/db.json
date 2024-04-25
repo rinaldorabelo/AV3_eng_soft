@@ -1,0 +1,14 @@
+{
+  "instituicao": [
+    {
+      "id": "1",
+      "escola": "",
+      "cnpj": "",
+      "bairro": "",
+      "logradouro": "",
+      "cep": "",
+      "tipoEscola": "",
+      "email": ""
+    }
+  ]
+}

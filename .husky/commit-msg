@@ -9,5 +9,6 @@ CONVENTIONAL_COMMIT_REGEX="^(build|chore|ci|docs|feat|fix|perf|refactor|revert|s
 # Verifica se a mensagem de commit segue o padrão do Conventional Commits
 if ! echo "$COMMIT_MSG" | grep -qE "$CONVENTIONAL_COMMIT_REGEX"; then
   echo "ERRO: A mensagem de commit não segue o padrão do Conventional Commits."
+  npm run commit
   exit 1
 fi
